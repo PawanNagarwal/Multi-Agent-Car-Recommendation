@@ -4,7 +4,7 @@ from crewai import Agent, Task, Crew, Process
 # from crewai_tools import search_tool
 
 
-from crewai.tools import SerperDevTool
+from crewai_tools import SerperDevTool
 search_tool = SerperDevTool(
     country = "in",
     locale = 'en',
@@ -146,6 +146,7 @@ def build_crew(user_requirements: dict) -> Crew:
         verbose=True,
     )
     return crew
+
 
 
 
