@@ -145,10 +145,12 @@ def build_crew(user_requirements: dict) -> Crew:
     
     crew = Crew(
         agents = [intake_agent, research_agent, recommendendation_agent],
-        tasks = Process.sequential,
+        process = Process.sequential,
+        tasks = tasks,
         verbose=True,
     )
     return crew
+
 
 
 
