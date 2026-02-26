@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from crewai import Agent, Task, Crew, Process
-from crewai_tools import search_tool
+from crewai import search_tool
 
 ## Agents 
 
@@ -138,4 +138,5 @@ def build_crew(user_requirements: dict) -> Crew:
         verbose=True,
     )
     return crew
+
 
