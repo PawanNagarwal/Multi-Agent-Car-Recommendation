@@ -33,6 +33,9 @@ research_agent = Agent(
         "Search the indian automobile market to find the top 5 cars that best"
         "match the structured requirements. Father model name, price , mileage, key specs and user ratings"
     ),
+    backstory = (
+        "You are a trusted automotive and your aim is to find top cars suitable for the requirement."
+    ),
     tools = [search_tool],
     verbose=True,
     allow_delegation=False
@@ -146,6 +149,7 @@ def build_crew(user_requirements: dict) -> Crew:
         verbose=True,
     )
     return crew
+
 
 
 
