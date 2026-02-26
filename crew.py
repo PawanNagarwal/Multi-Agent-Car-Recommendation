@@ -1,7 +1,15 @@
 import os
 from dotenv import load_dotenv
 from crewai import Agent, Task, Crew, Process
-from crewai_tools import search_tool
+# from crewai_tools import search_tool
+
+
+from crewai.tools import SerperDevTool
+search_tool = SerperDevTool(
+    country = "in",
+    locale = 'en',
+    num_results = 10
+)
 
 ## Agents 
 
@@ -138,6 +146,7 @@ def build_crew(user_requirements: dict) -> Crew:
         verbose=True,
     )
     return crew
+
 
 
 
